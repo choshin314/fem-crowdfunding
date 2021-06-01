@@ -1,4 +1,3 @@
-# fem-crowdfunding
 
 ## Project setup
 ```
