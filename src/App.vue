@@ -4,7 +4,7 @@
     <main class="font-sans bg-gray-400 bg-opacity-100">
       <base-content-wrapper class="-translate-y-24">
         <ProjectTitleCard />
-        <div class="bg-white">price stats days</div>
+        <ProjectStatsCard />
         <div>
           <h3>about project</h3>
           <p>about about</p>
@@ -19,10 +19,11 @@
 </template>
 <script>
 import Header from "./components/Header";
+import ProjectStatsCard from "./components/ProjectStatsCard";
 import ProjectTitleCard from "./components/ProjectTitleCard";
 
 export default {
-  components: { Header, ProjectTitleCard },
+  components: { Header, ProjectTitleCard, ProjectStatsCard },
 };
 </script>
 
