@@ -1,5 +1,5 @@
 <template>
-  <base-card class="pt-14 z-0 relative">
+  <base-card class="pt-14 z-0 relative px-6 md:px-12">
     <img
       class="
         absolute
@@ -11,8 +11,10 @@
       src="../assets/images/logo-mastercraft.svg"
     />
     <div class="relative text-center mb-10">
-      <h1 class="text-3xl font-bold mb-4">Mastercraft Bamboo Monitor Riser</h1>
-      <p class="text-gray-dark">
+      <h1 class="text-xl md:text-3xl font-bold mb-4">
+        Mastercraft Bamboo Monitor Riser
+      </h1>
+      <p class="text-gray-dark text-sm md:text-base">
         A beautiful & handcrafted monitor stand to reduce neck and eye strain.
       </p>
     </div>
@@ -22,9 +24,11 @@
           bg-primary
           text-white
           px-10
+          mr-2
           flex
           items-center
           active:bg-primary-dark
+          hover:bg-primary-dark
           focus:outline-none
           focus:ring focus:ring-offset-2
         "
@@ -32,7 +36,7 @@
       >
       <base-button class="bg-gray-light bg-opacity-20 flex items-center">
         <img class="inline-block" src="../assets/images/icon-bookmark.svg" />
-        <span class="ml-4 pr-6">Bookmark</span>
+        <span class="hidden sm:inline-block ml-4 pr-6">Bookmark</span>
       </base-button>
     </div>
   </base-card>
