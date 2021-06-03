@@ -1,12 +1,13 @@
 <template>
   <transition
     appear
-    enter-active-class="transition-all duration-300 ease-in-out"
-    leave-active-class="transition-all duration-300 ease-in-out"
-    enter-class="opacity-0"
-    enter-to-class="opacity-100"
-    leave-class="opacity-100"
-    leave-to-class="opacity-0"
+    :duration="400"
+    enter-active-class="transition-all duration-200 delay-100 ease-in-out"
+    leave-active-class="transition-all duration-200 ease-in-out"
+    enter-class="opacity-0 scale-y-125"
+    enter-to-class="opacity-100 scale-y-100"
+    leave-class="opacity-100 scale-y-100"
+    leave-to-class="opacity-0 scale-y-125"
   >
     <base-card
       v-if="show"
@@ -22,6 +23,7 @@
         text-lg
         px-0
         py-0
+        bg-white
       "
     >
       <ul>

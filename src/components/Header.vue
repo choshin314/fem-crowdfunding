@@ -2,11 +2,13 @@
   <header class="bg-cover header-bg h-75 md:h-96">
     <div class="w-full md:w-11/12 max-w-6xl px-6 pt-8 md:pt-12 mx-auto">
       <div class="flex justify-between relative">
-        <div class="relative z-10">
+        <div class="relative z-20">
           <img src="../assets/images/logo.svg" alt="crowdfund logo" />
         </div>
         <HeaderNavigation />
-        <HeaderNavigationMobile />
+        <HeaderNavigationMobileToggle @burgerClick="toggleMobileMenu" />
+        <HeaderNavigationMobileOverlay :show="showMobile" />
+        <HeaderNavigationMobileMenu :show="showMobile" />
       </div>
     </div>
   </header>
@@ -14,9 +16,28 @@
 
 <script>
 import HeaderNavigation from "./HeaderNavigation";
-import HeaderNavigationMobile from "./HeaderNavigationMobile";
+// import HeaderNavigationMobile from "./HeaderNavigationMobile";
+import HeaderNavigationMobileOverlay from "./HeaderNavigationMobileOverlay";
+import HeaderNavigationMobileMenu from "./HeaderNavigationMobileMenu";
+import HeaderNavigationMobileToggle from "./HeaderNavigationMobileToggle";
 export default {
-  components: { HeaderNavigation, HeaderNavigationMobile },
+  data() {
+    return {
+      showMobile: false,
+    };
+  },
+  components: {
+    HeaderNavigation,
+    // HeaderNavigationMobile,
+    HeaderNavigationMobileMenu,
+    HeaderNavigationMobileOverlay,
+    HeaderNavigationMobileToggle,
+  },
+  methods: {
+    toggleMobileMenu() {
+      this.showMobile = !this.showMobile;
+    },
+  },
 };
 </script>
 
