@@ -20,6 +20,7 @@
     </div>
     <div class="flex justify-between">
       <base-button
+        @click="toggleModal"
         class="
           bg-primary
           text-white
@@ -39,11 +40,31 @@
         <span class="hidden sm:inline-block ml-4 pr-6">Bookmark</span>
       </base-button>
     </div>
+    <ProjectBackingModal
+      v-if="showModal"
+      :show="showModal"
+      :toggleShow="toggleModal"
+    />
   </base-card>
 </template>
 
 <script>
-export default {};
+import ProjectBackingModal from "./ProjectBackingModal.vue";
+
+export default {
+  data() {
+    return {
+      product: { title: "Bamboo Riser" },
+      showModal: false,
+    };
+  },
+  components: { ProjectBackingModal },
+  methods: {
+    toggleModal() {
+      this.showModal = !this.showModal;
+    },
+  },
+};
 </script>
 
 <style></style>

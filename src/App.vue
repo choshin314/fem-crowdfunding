@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="h-full w-full">
     <Header />
     <main class="font-sans bg-gray-400 bg-opacity-100">
       <base-content-wrapper class="-translate-y-24">
@@ -15,6 +15,8 @@
         </div>
       </base-content-wrapper>
     </main>
+    <portal-target name="modal-overlay"></portal-target>
+    <portal-target name="modal"></portal-target>
   </div>
 </template>
 <script>
@@ -23,7 +25,11 @@ import ProjectStatsCard from "./components/ProjectStatsCard";
 import ProjectTitleCard from "./components/ProjectTitleCard";
 
 export default {
-  components: { Header, ProjectTitleCard, ProjectStatsCard },
+  components: {
+    Header,
+    ProjectTitleCard,
+    ProjectStatsCard,
+  },
 };
 </script>
 

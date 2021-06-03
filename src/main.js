@@ -4,6 +4,7 @@ import camelCase from "lodash/camelCase";
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
+import PortalVue from "portal-vue";
 import "./assets/index.css";
 
 Vue.config.productionTip = false;
@@ -26,6 +27,8 @@ requireComponent.keys().forEach((fileName) => {
   );
   Vue.component(componentName, componentConfig.default || componentConfig);
 });
+
+Vue.use(PortalVue);
 
 new Vue({
   router,
